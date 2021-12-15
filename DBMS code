@@ -1,0 +1,56 @@
+create table Employee(
+e_id varchar(10),
+f_name varchar(30),
+l_name varchar(30),
+qualification varchar(50),
+specialization varchar(30),
+DOJ varchar(20), 
+s_id varchar(10),
+primary key(e_id),
+foreign key(s_id)references software );
+
+create table order_details(
+order_id varchar(10),
+date_of_commencement date,
+date_of_release date,
+client_id varchar(10),
+s_id varchar(10),
+primary key(order_id),
+foreign key(client_id)references client,
+foreign key(s_id) references software);
+
+CREATE TABLE software (
+s_id varchar PRIMARY KEY,
+s_name varchar(255),
+price varchar(255),
+e_id varchar
+);
+
+CREATE TABLE client (
+client_id varchar PRIMARY KEY,
+fname varchar(255),
+lname varchar(255),
+email_id varchar ,
+phn varchar
+);
+
+CREATE TABLE admin (
+admin_id varchar PRIMARY KEY,
+fname varchar(255),
+lname varchar(255),
+dob date
+);
+insert into admin values('A-01','Dheeraj','Reddy','2003-01-03'),
+('A-02','Anjana','P','2002-06-11'),('A-03','Janvi','P','2003-01-02');
+
+CREATE TABLE login (
+client_id varchar,
+admin_id varchar,
+password varchar(255),
+FOREIGN KEY(client_id) REFERENCES client(client_id)ON DELETE CASCADE,
+FOREIGN KEY(admin_id) REFERENCES admin(admin_id)
+);
+insert into login(admin_id,password)values('A-01','dheeraj'),('A-02','anjana'),('A-03','janvi');
+
+create table increment(increment int);
+insert into increment values(1);
