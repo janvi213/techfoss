@@ -4,7 +4,8 @@ EHMS, select the type of the software needed and give a clear description of the
 
 Client and admin can start from welcome.JAVA
 
-*if you are an admin u can use the credentials, 
+*only if you are an admin u can use the credentials,
+
 user id : A-03 
 password : janvi*
 
