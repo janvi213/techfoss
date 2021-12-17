@@ -62,13 +62,12 @@ public class clientprofile extends JFrame{
         d0.addActionListener(new editclient());
         d4.addActionListener(new editclient());
         try {
-        	 register obj=new register();
-	    	 String query="select fname,lname,email_id,phn from client where client_id='"+obj.user_id+"'";
+        	 String query="select fname,lname,email_id,phn from client where client_id='"+register.user_id+"'";
 	    	 PreparedStatement stmt=conn.prepareStatement(query);
 	    	 ResultSet rs=stmt.executeQuery();
 	    	 while(rs.next())
 	    	 {
-	    	 d0.setText(obj.user_id);
+	    	 d0.setText(register.user_id);
 	    	 d1.setText(rs.getString("fname"));
 	    	 d2.setText(rs.getString("lname"));
 	    	 d3.setText(rs.getString("email_id"));
