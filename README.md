@@ -8,5 +8,5 @@ Client and admin can start from welcome.JAVA
 user id : A-03 <br>
 password : janvi*
 
-if you are a new client please register and login 
+if you are a new client please register and login <br>
 if u already have an account login 
